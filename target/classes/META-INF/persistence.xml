@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+		
+<persistence-unit name="pr-cotran-viagem" transaction-type="JTA" >
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    	<jta-data-source>java:jboss/datasources/ViagemDS</jta-data-source>
+    
+			<class>br.gov.presidencia.entity.Ferias</class>
+			<class>br.gov.presidencia.entity.Funcionario</class>
+			<class>br.gov.presidencia.entity.Rh</class>
+			<class>br.gov.presidencia.entity.Atividade</class>
+			<class>br.gov.presidencia.entity.Setor</class>
+			<class>br.gov.presidencia.entity.Departamento</class>
+			<class>br.gov.presidencia.entity.Gratificacao</class>
+			<class>br.gov.presidencia.entity.Graduacao</class>
+			<class>br.gov.presidencia.entity.TipoGratificacao</class>			
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+		    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/>
+		    <property name="hibernate.show_sql" value="true" />
+		    <property name="hibernate.format_sql" value="true" />
+		    <property name="hbm2ddl.auto" value="update"/>  
+		</properties>
+	</persistence-unit>
+</persistence>	
