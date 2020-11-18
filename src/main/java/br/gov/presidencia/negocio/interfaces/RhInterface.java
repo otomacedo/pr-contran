@@ -15,4 +15,5 @@ public interface RhInterface {
 	public Rh consultarRhPorFuncionario(Integer id);
 	public Response excluirFerias(Integer id);
 	public List<Rh> listarTercerizados();
+	public Response salvarFerias(Rh rh);
 }

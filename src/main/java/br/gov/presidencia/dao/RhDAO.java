@@ -10,6 +10,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.UserTransaction;
 
+import br.gov.presidencia.entity.Ferias;
 import br.gov.presidencia.entity.Rh;
 import br.gov.presidencia.util.Response;
 
@@ -31,7 +32,7 @@ public class RhDAO extends CotranDAO implements Serializable{
 	public Response incluir(Rh rh) {
 		try {
 			userTransaction.begin();
-			e.createNativeQuery("insert into rh values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+			e.createNativeQuery("insert into rh values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 			.setParameter(1, null)
 			.setParameter(2, 1)
 			.setParameter(3, rh.getMatriculaPr())
@@ -45,7 +46,8 @@ public class RhDAO extends CotranDAO implements Serializable{
 			.setParameter(11, rh.getGratificacao().getIdGratificacao())
 			.setParameter(12, rh.getSetor().getIdSetor())
 			.setParameter(13, rh.getTipo().getIdTipoGratificacao())
-			.setParameter(14, rh.getTercerizado()).executeUpdate();
+			.setParameter(14, rh.getTercerizado())
+			.setParameter(15, rh.getObservacao()).executeUpdate();
 			userTransaction.commit();
 			return new Response("RH salvo com sucesso.",1);
 		} catch (Exception e) { 
@@ -94,6 +96,23 @@ public class RhDAO extends CotranDAO implements Serializable{
 	@SuppressWarnings("unchecked")
 	public List<Rh> listarTercerizados(){
 		Query q = this.getEntityManager().createQuery("SELECT r FROM Rh r WHERE r.tercerizado = 1");
+		return q.getResultList();
+	}
+	
+	public Response salvarFerias(Rh rh) {
+		try {
+			userTransaction.begin();
+			this.e.merge(rh);
+			userTransaction.commit();
+			return new Response("Férias salva com sucesso.",1);
+		} catch (Exception e) {
+			return new Response("Erro ao salvar férias."+e.getMessage(),2);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Ferias> consultarFeriasPorRh(Rh rh){
+		Query q = this.getEntityManager().createQuery("SELECT f FROM Ferias f WHERE f.idRh = "+rh.getIdRh());
 		return q.getResultList();
 	}
 

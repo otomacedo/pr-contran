@@ -11,6 +11,7 @@ import javax.inject.Inject;
 
 import br.gov.presidencia.dao.FeriasDAO;
 import br.gov.presidencia.dao.RhDAO;
+import br.gov.presidencia.entity.Ferias;
 import br.gov.presidencia.entity.Rh;
 import br.gov.presidencia.negocio.interfaces.RhInterface;
 import br.gov.presidencia.util.Response;
@@ -58,5 +59,12 @@ public class RhEJB implements RhInterface{
 		return dao.listarTercerizados();
 	}
 	
-
+	public void verificarFerias(Rh rh) {
+		List<Ferias> ferias = dao.consultarFeriasPorRh(rh);
+		
+	}
+	
+	public Response salvarFerias(Rh rh) {
+		return dao.salvarFerias(rh);
+	}
 }

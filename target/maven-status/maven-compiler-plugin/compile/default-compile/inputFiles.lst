@@ -23,6 +23,7 @@ C:\Workspace\viagem\src\main\java\br\gov\presidencia\entity\Setor.java
 C:\Workspace\viagem\src\main\java\br\gov\presidencia\dao\DocumentoDAO.java
 C:\Workspace\viagem\src\main\java\br\gov\presidencia\dao\GraduacaoDAO.java
 C:\Workspace\viagem\src\main\java\br\gov\presidencia\dao\SetorDAO.java
+C:\Workspace\viagem\src\main\java\br\gov\presidencia\entity\FeriasMarcadas.java
 C:\Workspace\viagem\src\main\java\br\gov\presidencia\entity\Gratificacao.java
 C:\Workspace\viagem\src\main\java\br\gov\presidencia\filter\CorsFilter.java
 C:\Workspace\viagem\src\main\java\br\gov\presidencia\rest\FuncionarioRest.java

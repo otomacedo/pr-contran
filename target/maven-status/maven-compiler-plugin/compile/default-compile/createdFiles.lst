@@ -12,6 +12,7 @@ br\gov\presidencia\negocio\interfaces\AdministracaoInterface.class
 br\gov\presidencia\dao\AtividadeDAO.class
 br\gov\presidencia\entity\Gratificacao.class
 br\gov\presidencia\entity\Departamento.class
+br\gov\presidencia\entity\FeriasMarcadas.class
 br\gov\presidencia\dao\DocumentoDAO.class
 br\gov\presidencia\ProjetoApplication.class
 br\gov\presidencia\dao\RhDAO.class

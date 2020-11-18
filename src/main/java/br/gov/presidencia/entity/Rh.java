@@ -33,7 +33,7 @@ public class Rh implements Serializable{
 	
 	@OneToMany(cascade= CascadeType.ALL)
 	@JoinColumn(name="idRh")
-	private List<Ferias> ferias;
+	private List<FeriasMarcadas> feriasMarcadas;
 	
 	@OneToOne
 	@JoinColumn(name="idFuncionario")
@@ -99,11 +99,11 @@ public class Rh implements Serializable{
 	public void setFuncionario(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
-	public List<Ferias> getFerias() {
-		return ferias;
+	public List<FeriasMarcadas> getFeriasMarcadas() {
+		return feriasMarcadas;
 	}
-	public void setFerias(List<Ferias> ferias) {
-		this.ferias = ferias;
+	public void setFeriasMarcadas(List<FeriasMarcadas> feriasMarcadas) {
+		this.feriasMarcadas = feriasMarcadas;
 	}
 
 	public Departamento getDepartamento() {

@@ -15,6 +15,7 @@
 			<class>br.gov.presidencia.entity.Gratificacao</class>
 			<class>br.gov.presidencia.entity.Graduacao</class>
 			<class>br.gov.presidencia.entity.TipoGratificacao</class>			
+			<class>br.gov.presidencia.entity.FeriasMarcadas</class>			
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 		    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
