@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.mysql.cj.jdbc.Blob;
+
 @Entity
 	public class Funcionario implements Serializable{
 	
@@ -184,5 +186,8 @@ import javax.persistence.Id;
 	public void setStatus(Boolean status) {
 		this.status = status;
 	}
+
+
+	
 	
 }

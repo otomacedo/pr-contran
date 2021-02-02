@@ -28,7 +28,7 @@ public class FeriasMarcadas implements Serializable {
 	private Date dataDeMarcacao;
 	
 	@OneToMany(cascade= CascadeType.ALL)
-	@JoinColumn(name="idRh")
+	@JoinColumn(name="idFeriasMarcadas")
 	private List<Ferias> ferias;
 
 	public Integer getIdFeriasMarcadas() {
