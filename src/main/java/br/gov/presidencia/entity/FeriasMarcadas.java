@@ -31,6 +31,7 @@ public class FeriasMarcadas implements Serializable {
 	@JoinColumn(name="idFeriasMarcadas")
 	private List<Ferias> ferias;
 
+	private String status;
 	public Integer getIdFeriasMarcadas() {
 		return idFeriasMarcadas;
 	}
@@ -53,6 +54,14 @@ public class FeriasMarcadas implements Serializable {
 
 	public void setFerias(List<Ferias> ferias) {
 		this.ferias = ferias;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 	

@@ -23,7 +23,7 @@
 			<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/>
 		    <property name="hibernate.show_sql" value="true" />
 		    <property name="hibernate.format_sql" value="true" />
-		    <property name="hbm2ddl.auto" value="update"/>  
+		    <property name="hibernate.hbm2ddl.auto" value="update"/>  
 		</properties>
 	</persistence-unit>
 </persistence>	

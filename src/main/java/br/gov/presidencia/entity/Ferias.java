@@ -19,6 +19,8 @@ public class Ferias implements Serializable{
 	private int idFerias;
 	private Date inicio;
 	private Date fim;
+	private String periodo;
+	private String status;
 
 	public Date getInicio() {
 		return inicio;
@@ -37,6 +39,17 @@ public class Ferias implements Serializable{
 	}
 	public void setIdFerias(int idFerias) {
 		this.idFerias = idFerias;
-	}	
-	
+	}
+	public String getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 }
